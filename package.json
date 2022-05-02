@@ -19,9 +19,9 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "deploy:test": "sls deploy --aws-profile fluxitup --stage test",
-    "deploy:stage": "sls deploy --aws-profile fluxitup --stage stage",
-    "deploy:prod": "sls deploy --aws-profile fluxitup --stage production"
+    "deploy:test": "sls deploy --aws-profile fluxitup --stage test --force",
+    "deploy:stage": "sls deploy --aws-profile fluxitup --stage stage --force",
+    "deploy:prod": "sls deploy --aws-profile fluxitup --stage production --force"
   },
   "dependencies": {
     "@nestjs/common": "8.4.4",
@@ -52,8 +52,6 @@
     "serverless": "^3.16.0",
     "serverless-iam-roles-per-function": "^3.2.0",
     "serverless-offline": "8.7.0",
-    "serverless-plugin-optimize": "4.2.1-rc.1",
-    "serverless-plugin-typescript": "2.1.2",
     "serverless-prune-plugin": "2.0.1",
     "serverless-webpack": "5.7.0",
     "source-map-support": "0.5.21",
